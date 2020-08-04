@@ -1,2 +1,2 @@
-* linguist-language=python 50%
-* linguist-language=Java 50%
+*.python linguist-language=50%
+*.Java linguist-language=50%
