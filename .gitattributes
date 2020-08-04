@@ -1,2 +1,2 @@
-*.python linguist-language=Scala
-*.Java linguist-language=Scala
+*.python linguist-language=Java
+*.Java linguist-language=Java
