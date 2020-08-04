@@ -1,2 +1,2 @@
-*.js linguist-language=python
-*.css linguist-language=Java
+*.python linguist-language=Scala
+*.Java linguist-language=Scala
