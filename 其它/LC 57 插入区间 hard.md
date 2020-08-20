@@ -34,7 +34,7 @@ class Solution {
             res.add(intervals[i]);
             i++;
         }
-		// 对应3，4
+	// 对应3，4
         int[] tmp = new int[] {newInterval[0], newInterval[1]};
         while (i <= intervals.length-1 && newInterval[1] >= intervals[i][0]) {
             tmp[0] = Math.min(tmp[0], intervals[i][0]);
@@ -42,7 +42,7 @@ class Solution {
             i++;
         }
         res.add(tmp);
-		// 对应5
+	// 对应5
         while (i <= intervals.length-1) {
             res.add(intervals[i]);
             i++;
