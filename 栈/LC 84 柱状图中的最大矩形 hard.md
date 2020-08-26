@@ -6,7 +6,7 @@
 
 对于每跟柱子，向其两侧遍历，直到遇到高度低于它的柱子；
 
-时间复杂度：<img src = 'https://latex.codecogs.com/gif.latex?\\o(n^2)'>，空间复杂度O(1)；
+时间复杂度：<img src = 'https://latex.codecogs.com/gif.latex?\\o(n^2)' />，空间复杂度O(1)；
 
 ```java
 public class Solution {
