@@ -23,10 +23,12 @@ class Solution {
         // 下面的循环只适用s和p都不为空时的匹配情况
         for (int i=1; i<=len1; i++) {
             for (int j=1; j<=len2; j++) {
+                // '||'一般在条件判断里用
                 if (p.charAt(i-1) == s.charAt(j-1) || p.charAt(i-1) == '?') {
                     dp[i][j] = dp[i-1][j-1];
                 }
                 else if (p.charAt(i-1) == '*') {
+                    // '|'按位或；这里dp[i-1][j-1]==0时, dp[i][j-1]肯定也==0，所以省略；
                     dp[i][j] = dp[i-1][j] | dp[i][j-1];
                 }
             }
