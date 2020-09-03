@@ -1,6 +1,6 @@
 <img src = 'https://github.com/leopardv10/DataStructure-and-ComputerAlgorithm/blob/master/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/images/%E5%89%91%E6%8C%87offer19.png?raw=true' width = 50%>
 
-### 动态规划：
+### 1.动态规划：
 
 dp [ i ] [ j ]表示p的前i个字符和s的前j个字符匹配结果
 
@@ -41,6 +41,31 @@ class Solution {
             }
         }
         return dp[len2][len1] == 1;
+    }
+}
+```
+
+### 2. 递归
+
+<img src = 'https://github.com/leopardv10/DataStructure-and-ComputerAlgorithm/blob/master/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/images/%E5%89%91%E6%8C%87offer%2019-1.png?raw=true' width = 70%>
+
+```java
+class Solution {
+    public boolean isMatch(String s, String p) {
+        if (p.length() == 0) return s.length() == 0;
+        
+        if (p.length() >= 2  && p.charAt(1) == '*') {
+            boolean r1 = isMatch(s, p.substring(2));
+            boolean r2 = compare(s, p) && isMatch(s.substring(1), p);
+            return r1 | r2;
+        }
+        else {
+            return compare(s, p) && isMatch(s.substring(1), p.substring(1));
+        }
+    }
+
+    private boolean compare(String s, String p) {
+        return s.length() > 0 && (s.charAt(0) == p.charAt(0) | p.charAt(0) == '.');
     }
 }
 ```
