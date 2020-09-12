@@ -2,7 +2,7 @@
 
 <img src = 'https://github.com/leopardv10/DataStructure-and-ComputerAlgorithm/blob/master/%E4%BA%8C%E5%8F%89%E6%A0%91/images/116-2.png?raw=true' width=80%>
 
-### 解法一：BFS(栈，不符合题目常数级空间复杂度要求)
+### 解法一：BFS(队列，不符合题目常数级空间复杂度要求)
 
 ```java
 class Solution {
